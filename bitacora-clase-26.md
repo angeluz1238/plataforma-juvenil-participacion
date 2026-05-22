@@ -1,8 +1,8 @@
 # Bitácora Clase 26
 
-Nombre del estudiante:
-Fecha:
-Rama:
+Nombre del estudiante:ANGELUZ MILLAN ALVAREZ
+Fecha:21 MAYO 2026
+Rama:Clase-26-inicio-proyecto
 
 ## Actividades realizadas
 
