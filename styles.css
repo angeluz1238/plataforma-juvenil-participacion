@@ -6,11 +6,12 @@
 
 /* --- Variables para colores y tamaños (fácil de cambiar) --- */
 :root {
-  --bg: #f5f7fa;          /* color de fondo de la página */
+  --bg: #d5f0df;          /* verde claro */
+  --bg-soft: #d7e8ff;     /* azul claro */
   --card: #ffffff;        /* fondo de las tarjetas */
-  --text: #1f2937;        /* color principal del texto */
-  --muted: #6b7280;       /* texto secundario */
-  --accent: #0ea5a4;      /* color de acento (botones, enlaces) */
+  --text: #0f3d27;        /* color principal del texto */
+  --muted: #5e7d68;       /* texto secundario */
+  --accent: #2f9b5b;      /* color de acento (botones, enlaces) */
   --radius: 10px;         /* radio de bordes */
   --max-width: 900px;     /* ancho máximo del contenido */
 }
@@ -22,7 +23,7 @@ html, body { height: 100%; margin: 0; }
 /* --- Tipografía y fondo general --- */
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg, var(--bg), #eef2f7);
+  background: linear-gradient(180deg, var(--bg), var(--bg-soft));
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -38,17 +39,44 @@ body {
 /* --- Cabecera / header --- */
 .site-header {
   padding: 2.2rem 0 1.2rem;
-  background: transparent;
+  background: rgba(47, 155, 91, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .site-title {
   margin: 0 0 0.25rem;
-  font-size: 1.75rem; /* tamaño grande pero no gigante */
-  letter-spacing: -0.5px;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 .tagline {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.section-label {
+  background: rgba(47, 155, 91, 0.15);
+  color: #0f3d27;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.section-title {
+  margin: 0;
+  font-size: 1.45rem;
+  color: #0f3d27;
 }
 
 /* --- Área de contenido principal --- */
@@ -61,22 +89,65 @@ body {
 /* --- Tarjetas limpias y profesionales --- */
 .card {
   background: var(--card);
-  padding: 1.2rem 1.4rem;
+  padding: 1.6rem 1.7rem;
   border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(31,41,55,0.08);
-  border: 1px solid rgba(15,23,42,0.03);
+  box-shadow: 0 18px 40px rgba(15, 30, 80, 0.14);
+  border: 1px solid rgba(28, 97, 209, 0.14);
 }
 .card h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.15rem;
+  margin: 0 0 0.9rem;
+  font-size: 1.18rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+}
+.card p {
+  margin: 0 0 1rem;
+  text-align: justify;
+}
+.card p::first-letter {
+  text-transform: uppercase;
+}
+.card section {
+  background: #f6f9ff;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(28, 97, 209, 0.12);
+}
+.card button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.05rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(28, 97, 209, 0.22);
 }
 
 /* --- Pie de página --- */
 .site-footer {
-  border-top: 1px solid rgba(31,41,55,0.04);
-  padding: 1rem 0 3rem;
-  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.16);
+  padding: 1.2rem 0 2.5rem;
+  color: rgba(255,255,255,0.82);
   font-size: 0.95rem;
+}
+.site-footer p {
+  margin: 0.25rem 0;
 }
 
 /* --- Pequeños ajustes para que se vea bien en móviles --- */
