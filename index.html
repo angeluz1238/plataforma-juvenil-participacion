@@ -1,54 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plataforma juvenil de participacion</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Plataforma Juvenil de Participación</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page">
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title">Plataforma juvenil de participacion</h1>
-            <p class="tagline">práctica académica sobre participación juvenil, transparencia y control ciudadano</p>
-        </div>
-    </header>
+<body>
 
-    <main class="content container">
-        <div class="section-header">
-            <span class="section-label">Categorías</span>
-            <h2 class="section-title">Resumen de la clase</h2>
-        </div>
+  <header>
+    <h1>Plataforma Juvenil de Participación</h1>
+    <p>
+      Proyecto académico para aprender participación juvenil, transparencia,
+      control ciudadano y trazabilidad mediante herramientas digitales.
+    </p>
+  </header>
 
-        <article class="card">
-            <h2>advertencias</h2>
-            <p>
-                este sistema no corresponde a una elección real y no debe usar datos reales.
-            </p>
-        </article>
+  <main>
+    <section>
+      <h2>Propósito del proyecto</h2>
+      <p>
+        Esta plataforma se construirá progresivamente como ejercicio pedagógico
+        para comprender cómo la tecnología puede apoyar procesos comunitarios
+        de participación y organización.
+      </p>
+    </section>
 
-        <article class="card">
-            <h2>clase 27</h2>
-            <p>
-                en esta clase iniciamos nuestro repositorio y vamos a crear nuestra rama y dejar la evidencia de la creacion de la misma.
-            </p>
-            <section>
-                <p>
-                    en esta clase se mejora la estructura visual del proyecto y se conecta , los archivos de html, css, javascript
-                </p>
-                <button id="btnmensaje">ver mensaje de la clase</button>
-                <p id="mensajeclase"></p>
-                <p id="contadorclics" class="contador-clics"></p>
-            </section>
-        </article>
-    </main>
+    <section>
+      <h2>Advertencia pedagógica</h2>
+      <p>
+        Este proyecto no corresponde a una elección real, no recolecta datos
+        personales reales y no debe utilizarse para hacer acusaciones.
+      </p>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>© 2026 Plataforma Juvenil — Proyecto de práctica</p>
-            <p>programadores para la paz -modulo3</p>
-        </div>
-    </footer>
-    <script src="app.js"></script>
+    <section>
+      <h2>Clase 27</h2>
+      <p>
+        En esta clase se mejora la estructura visual del proyecto y se conectan
+        los archivos HTML, CSS y JavaScript.
+      </p>
+
+      <button id="btnMensaje">Ver mensaje de la clase</button>
+      <p id="mensajeClase"></p>
+      <p id="contadorClics"></p>
+    </section>
+  </main>
+  <section class="seccion-candidatos">
+  <h2>Perfiles de participación</h2>
+
+  <p>
+    Esta sección presenta perfiles ficticios creados con fines pedagógicos.
+    No corresponde a una elección real y no debe usar datos personales reales.
+  </p>
+
+  <div class="contenedor-candidatos">
+
+    <article class="tarjeta-candidato">
+      <h3>Perfil Transparencia Juvenil</h3>
+      <p><strong>Rol:</strong> Candidato pedagógico</p>
+      <p>
+        <strong>Propuesta:</strong> Promover información clara, participación juvenil
+        y trazabilidad en los procesos comunitarios.
+      </p>
+      <p><strong>Estado:</strong> Perfil de práctica académica</p>
+      <button class="btnPerfil" data-perfil="Transparencia Juvenil">
+        Ver información
+      </button>
+    </article>
+
+    <article class="tarjeta-candidato">
+      <h3>Perfil Comunidad Digital</h3>
+      <p><strong>Rol:</strong> Candidato pedagógico</p>
+      <p>
+        <strong>Propuesta:</strong> Fortalecer el uso responsable de herramientas digitales
+        para la organización y la comunicación comunitaria.
+      </p>
+      <p><strong>Estado:</strong> Perfil de práctica académica</p>
+      <button class="btnPerfil" data-perfil="Comunidad Digital">
+        Ver información
+      </button>
+    </article>
+
+    <article class="tarjeta-candidato">
+      <h3>Perfil Derechos y Participación</h3>
+      <p><strong>Rol:</strong> Candidato pedagógico</p>
+      <p>
+        <strong>Propuesta:</strong> Impulsar el cuidado de datos, el respeto por los derechos
+        y la participación informada.
+      </p>
+      <p><strong>Estado:</strong> Perfil de práctica académica</p>
+      <button class="btnPerfil" data-perfil="Derechos y Participación">
+        Ver información
+      </button>
+    </article>
+
+  </div>
+
+  <div id="detallePerfil" class="detalle-perfil"></div>
+</section>
+
+  <footer>
+    <p>Programadores para la Paz - Módulo 3</p>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

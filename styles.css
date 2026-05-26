@@ -1,171 +1,88 @@
-/*
-  styles.css
-  CSS sencillo y comentado para que un principiante lo entienda,
-  pero con un resultado profesional.
-*/
+body{
 
-/* --- Variables para colores y tamaños (fácil de cambiar) --- */
-:root {
-  --bg: #d5f0df;          /* verde claro */
-  --bg-soft: #d7e8ff;     /* azul claro */
-  --card: #ffffff;        /* fondo de las tarjetas */
-  --text: #0f3d27;        /* color principal del texto */
-  --muted: #5e7d68;       /* texto secundario */
-  --accent: #2f9b5b;      /* color de acento (botones, enlaces) */
-  --radius: 10px;         /* radio de bordes */
-  --max-width: 900px;     /* ancho máximo del contenido */
-}
-
-/* --- Reinicio muy básico para consistencia --- */
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
-
-/* --- Tipografía y fondo general --- */
-body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg, var(--bg), var(--bg-soft));
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* --- Contenedor centrado y con máximo ancho --- */
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* --- Cabecera / header --- */
-.site-header {
-  padding: 2.2rem 0 1.2rem;
-  background: rgba(47, 155, 91, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.site-title {
-  margin: 0 0 0.25rem;
-  font-size: 2rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-}
-.tagline {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-}
-
-.section-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-.section-label {
-  background: rgba(47, 155, 91, 0.15);
-  color: #0f3d27;
-  padding: 0.45rem 1rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-.section-title {
-  margin: 0;
-  font-size: 1.45rem;
-  color: #0f3d27;
-}
-
-/* --- Área de contenido principal --- */
-.content {
-  padding: 1.8rem 0 3rem;
-  display: grid;
-  gap: 1.2rem; /* separación entre tarjetas */
-}
-
-/* --- Tarjetas limpias y profesionales --- */
-.card {
-  background: var(--card);
-  padding: 1.6rem 1.7rem;
-  border-radius: var(--radius);
-  box-shadow: 0 18px 40px rgba(15, 30, 80, 0.14);
-  border: 1px solid rgba(28, 97, 209, 0.14);
-}
-.card h2 {
-  margin: 0 0 0.9rem;
-  font-size: 1.18rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  background: var(--accent-soft);
-  display: inline-block;
-  padding: 0.55rem 0.85rem;
-  border-radius: 999px;
-}
-.card p {
-  margin: 0 0 1rem;
-  text-align: justify;
-}
-.card p::first-letter {
-  text-transform: uppercase;
-}
-.card section {
-  background: #f6f9ff;
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(28, 97, 209, 0.12);
-}
-.card button,
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 0.75rem 1.05rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card button:hover,
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(28, 97, 209, 0.22);
-}
-
-/* --- Pie de página --- */
-.site-footer {
-  border-top: 1px solid rgba(255,255,255,0.16);
-  padding: 1.2rem 0 2.5rem;
-  color: rgba(255,255,255,0.82);
-  font-size: 0.95rem;
-}
-.site-footer p {
-  margin: 0.25rem 0;
-}
-
-/* --- Pequeños ajustes para que se vea bien en móviles --- */
-@media (max-width: 600px) {
-  .site-title { font-size: 1.4rem; }
-  .content { padding-left: 0; padding-right: 0; }
-}
-
-/* --- Clases útiles que un principiante puede usar --- */
-.muted { color: var(--muted); }
-.accent { color: var(--accent); }
-.btn {
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 0.9rem;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-/* Fin del archivo - cambia las variables en :root para personalizar */
+    font-family:Arial,sans-serif;
+    
+    margin:0;
+    
+    padding:20px;
+    
+    background:#f5f5f5;
+    
+    }
+    
+    header{
+    
+    text-align:center;
+    
+    margin-bottom:30px;
+    
+    }
+    
+    .seccion-candidatos{
+    
+    background:white;
+    
+    padding:20px;
+    
+    border-radius:10px;
+    
+    }
+    
+    .contenedor-candidatos{
+    
+    display:grid;
+    
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    
+    gap:18px;
+    
+    margin-top:20px;
+    
+    }
+    
+    .tarjeta-candidato{
+    
+    border:1px solid #ddd;
+    
+    border-left:5px solid #8A1538;
+    
+    border-radius:10px;
+    
+    padding:18px;
+    
+    background:#fff;
+    
+    }
+    
+    .tarjeta-candidato h3{
+    
+    color:#8A1538;
+    
+    margin-top:0;
+    
+    }
+    
+    .tarjeta-candidato button{
+    
+    margin-top:10px;
+    
+    padding:8px;
+    
+    cursor:pointer;
+    
+    }
+    
+    .detalle-perfil{
+    
+    margin-top:20px;
+    
+    padding:15px;
+    
+    background:#F9EEF3;
+    
+    border-left:5px solid #C2185B;
+    
+    border-radius:8px;
+    
+    }
