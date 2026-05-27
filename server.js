@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 
-const rutacandidatos= patch.join(__dirname, 'datos', 'candidatos.json');
+const rutacandidatos= path.join(__dirname, 'data', 'candidatos.json');
 
 function leerCandidatos() {
     const data = fs.readFileSync(rutacandidatos, 'utf-8');
@@ -26,30 +26,30 @@ app.get('/candidatos', (req, res) => {
 });
 
 app.post('/api/candidatos', function (req, res) {
-    const nuevoCandidato = req.body;
-    id = Date.now();
-    nombre: req.body.nombre;
-    rol:req.body.rol;
-    propuesta:req.body.propuesta;
-    estado: " perfil de practica academica";    
+    const nuevoCandidato = {
+        id: Date.now(),
+        nombre: req.body.nombre,
+        rol: req.body.rol,
+        propuesta: req.body.propuesta,
+        estado: "perfil de práctica académica"
+    };
 
-});
+    if (!nuevoCandidato.nombre || !nuevoCandidato.rol || !nuevoCandidato.propuesta) {
+        return res.status(400).json({
+            mensaje: "faltan datos obligatorios"
+        });
+    }
 
-if (nuevocandidato.nombre && nuevocandidato.rol && nuevocandidato.propuesta) {
-    return res.status(400).json({
-        mensaje: "faltan datos obligatorios"
+    const candidatos = leerCandidatos();
+    candidatos.push(nuevoCandidato);
+    guardarCandidatos(candidatos);
+
+    res.status(201).json({
+        mensaje: "perfil guardado correctamente",
+        candidato: nuevoCandidato
     });
-}
-
-const candidatos = leerCandidatos();
-candidatos.push(nuevocandidato);
-guardarCandidatos(candidatos);
-
-res.status(201).json({
-    mensaje: "candidato creado exitosamente",
-    candidato: nuevocandidato
 });
 
-app.listen(PORT,function(){
+app.listen(PORT, function() {
     console.log(`Servidor funcionando en http://localhost:${PORT}`);
 }); 

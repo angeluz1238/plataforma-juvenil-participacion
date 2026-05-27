@@ -1,108 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Plataforma Juvenil de Participación</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Juvenil de Participación</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Proyecto educativo</span>
+        <h1>Plataforma Juvenil de Participación</h1>
+        <p class="hero-text">
+          Una práctica académica para aprender sobre participación juvenil,
+          transparencia, control ciudadano y trazabilidad.
+        </p>
+      </div>
+      <div class="hero-badge">No es una elección real</div>
+    </header>
 
-  <header>
-    <h1>Plataforma Juvenil de Participación</h1>
-    <p>
-      Proyecto académico para aprender participación juvenil, transparencia,
-      control ciudadano y trazabilidad mediante herramientas digitales.
-    </p>
-  </header>
+    <main>
+      <section class="intro-card">
+        <h2>Sobre este proyecto</h2>
+        <p>
+          Este sistema es una demostración pedagógica. Los datos son ficticios y la herramienta
+          sirve para practicar la construcción de interfaces de participación responsable.
+        </p>
+      </section>
 
-  <main>
-    <section>
-      <h2>Propósito del proyecto</h2>
-      <p>
-        Esta plataforma se construirá progresivamente como ejercicio pedagógico
-        para comprender cómo la tecnología puede apoyar procesos comunitarios
-        de participación y organización.
-      </p>
-    </section>
+      <section class="panel panel--warning">
+        <h2>Advertencias</h2>
+        <p>
+          Esta plataforma no corresponde a una elección real. No debe usar datos personales reales,
+          sensibles o identificables.
+        </p>
+      </section>
 
-    <section>
-      <h2>Advertencia pedagógica</h2>
-      <p>
-        Este proyecto no corresponde a una elección real, no recolecta datos
-        personales reales y no debe utilizarse para hacer acusaciones.
-      </p>
-    </section>
+      <section class="panel panel--interactive">
+        <div>
+          <h2>Clase n27</h2>
+          <p>
+            En esta clase mejoramos la estructura visual del proyecto y conectamos los archivos de
+            HTML, CSS y JavaScript.
+          </p>
+        </div>
+        <div class="botonera">
+          <button id="btnMensaje" class="btn">Ver mensaje de la clase</button>
+          <p id="mensajeClase" class="texto-destacado"></p>
+          <p id="contadorClics" class="contador"></p>
+        </div>
+      </section>
 
-    <section>
-      <h2>Clase 27</h2>
-      <p>
-        En esta clase se mejora la estructura visual del proyecto y se conectan
-        los archivos HTML, CSS y JavaScript.
-      </p>
+      <section class="seccion-candidatos">
+        <div class="section-header">
+          <div>
+            <h2>Perfiles de participación</h2>
+            <p>
+              Esta sección presenta perfiles ficticios creados con fines pedagógicos.
+              No corresponde a una elección real y no debe usar datos personales reales.
+            </p>
+          </div>
+        </div>
 
-      <button id="btnMensaje">Ver mensaje de la clase</button>
-      <p id="mensajeClase"></p>
-      <p id="contadorClics"></p>
-    </section>
-  </main>
-  <section class="seccion-candidatos">
-  <h2>Perfiles de participación</h2>
+        <div class="contenedor-candidatos">
+          <article class="tarjeta-candidato">
+            <h3>Perfil Transparencia Juvenil</h3>
+            <p><strong>Rol:</strong> Candidato pedagógico</p>
+            <p>
+              <strong>Propuesta:</strong> Promover información clara, participación juvenil
+              y trazabilidad en los procesos comunitarios.
+            </p>
+            <p><strong>Estado:</strong> Perfil de práctica académica</p>
+            <button class="btn btn--secondary btnPerfil" data-perfil="Transparencia Juvenil">
+              Ver información
+            </button>
+          </article>
 
-  <p>
-    Esta sección presenta perfiles ficticios creados con fines pedagógicos.
-    No corresponde a una elección real y no debe usar datos personales reales.
-  </p>
+          <article class="tarjeta-candidato">
+            <h3>Perfil Comunidad Digital</h3>
+            <p><strong>Rol:</strong> Candidato pedagógico</p>
+            <p>
+              <strong>Propuesta:</strong> Fortalecer el uso responsable de herramientas digitales
+              para la organización y la comunicación comunitaria.
+            </p>
+            <p><strong>Estado:</strong> Perfil de práctica académica</p>
+            <button class="btn btn--secondary btnPerfil" data-perfil="Comunidad Digital">
+              Ver información
+            </button>
+          </article>
 
-  <div class="contenedor-candidatos">
+          <article class="tarjeta-candidato">
+            <h3>Perfil Derechos y Participación</h3>
+            <p><strong>Rol:</strong> Candidato pedagógico</p>
+            <p>
+              <strong>Propuesta:</strong> Impulsar el cuidado de datos, el respeto por los derechos
+              y la participación informada.
+            </p>
+            <p><strong>Estado:</strong> Perfil de práctica académica</p>
+            <button class="btn btn--secondary btnPerfil" data-perfil="Derechos y Participación">
+              Ver información
+            </button>
+          </article>
+        </div>
 
-    <article class="tarjeta-candidato">
-      <h3>Perfil Transparencia Juvenil</h3>
-      <p><strong>Rol:</strong> Candidato pedagógico</p>
-      <p>
-        <strong>Propuesta:</strong> Promover información clara, participación juvenil
-        y trazabilidad en los procesos comunitarios.
-      </p>
-      <p><strong>Estado:</strong> Perfil de práctica académica</p>
-      <button class="btnPerfil" data-perfil="Transparencia Juvenil">
-        Ver información
-      </button>
-    </article>
+        <div id="detallePerfil" class="detalle-perfil"></div>
+      </section>
 
-    <article class="tarjeta-candidato">
-      <h3>Perfil Comunidad Digital</h3>
-      <p><strong>Rol:</strong> Candidato pedagógico</p>
-      <p>
-        <strong>Propuesta:</strong> Fortalecer el uso responsable de herramientas digitales
-        para la organización y la comunicación comunitaria.
-      </p>
-      <p><strong>Estado:</strong> Perfil de práctica académica</p>
-      <button class="btnPerfil" data-perfil="Comunidad Digital">
-        Ver información
-      </button>
-    </article>
+      <section class="formulario-candidato panel">
+        <div class="section-header">
+          <h2>Registrar perfil pedagógico</h2>
+          <p>
+            Registra un perfil ficticio para la práctica académica. No uses nombres reales,
+            cédulas, teléfonos, direcciones ni datos sensibles.
+          </p>
+        </div>
 
-    <article class="tarjeta-candidato">
-      <h3>Perfil Derechos y Participación</h3>
-      <p><strong>Rol:</strong> Candidato pedagógico</p>
-      <p>
-        <strong>Propuesta:</strong> Impulsar el cuidado de datos, el respeto por los derechos
-        y la participación informada.
-      </p>
-      <p><strong>Estado:</strong> Perfil de práctica académica</p>
-      <button class="btnPerfil" data-perfil="Derechos y Participación">
-        Ver información
-      </button>
-    </article>
+        <div class="form-grid">
+          <input id="nombreCandidato" type="text" placeholder="Nombre ficticio del perfil">
+          <input id="rolCandidato" type="text" placeholder="Rol pedagógico">
+          <textarea id="propuestaCandidato" rows="3" placeholder="Propuesta breve y responsable"></textarea>
+          <button id="btnGuardarCandidato" type="button" class="btn btn--primary">Guardar perfil</button>
+        </div>
 
+        <p id="mensajeGuardado" class="texto-destacado"></p>
+      </section>
+
+      <section class="lista-candidatos panel">
+        <h2>Perfiles guardados</h2>
+        <div id="contenedorCandidatosGuardados" class="lista-guardados"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Plataforma Juvenil de Participación</p>
+      <p>Programadores para la Paz - Módulo 3</p>
+    </footer>
   </div>
-
-  <div id="detallePerfil" class="detalle-perfil"></div>
-</section>
-
-  <footer>
-    <p>Programadores para la Paz - Módulo 3</p>
-  </footer>
-
   <script src="app.js"></script>
 </body>
 </html>

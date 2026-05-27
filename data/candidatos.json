@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": 1779857787357,
+    "nombre": "monica",
+    "rol": "veedora",
+    "propuesta": "garantizar derechos e informacion confiable",
+    "estado": "perfil de práctica académica"
+  },
+  {
+    "id": 1779857904576,
+    "nombre": "tuyos",
+    "rol": "observador",
+    "propuesta": "confirmar informacion confiable",
+    "estado": "perfil de práctica académica"
+  }
+]
