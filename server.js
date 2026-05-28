@@ -20,6 +20,17 @@ function guardarCandidatos(candidatos) {
     fs.writeFileSync(rutacandidatos, JSON.stringify(candidatos, null, 2));
 }
 
+const rutaVotos = path.join(__dirname, 'data', 'votos.json');
+
+function leerVotos() {
+    const data = fs.readFileSync(rutaVotos, 'utf8');
+    return JSON.parse(data);
+}
+
+function guardarVotos(votos) {
+    fs.writeFileSync(rutaVotos, JSON.stringify(votos, null, 2));
+}
+
 app.get('/candidatos', (req, res) => {
     const candidatos = leerCandidatos();
     res.json(candidatos);
