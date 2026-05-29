@@ -11,7 +11,7 @@ const contenedorCandidatosGuardados = document.getElementById("contenedorCandida
 
 async function cargarCandidatosGuardados() {
   try {
-    const respuesta = await fetch("/candidatos");
+    const respuesta = await fetch("/api/candidatos");
     if (!respuesta.ok) throw new Error("Error al cargar candidatos");
     
     const candidatos = await respuesta.json();
