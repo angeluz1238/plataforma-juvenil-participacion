@@ -36,6 +36,39 @@ app.get('/candidatos', (req, res) => {
     res.json(candidatos);
 });
 
+app.get('/api/candidatos', (req, res) => {
+    const candidatos = leerCandidatos();
+    res.json(candidatos);
+});
+
+app.get('/api/votos', (req, res) => {
+    const votos = leerVotos();
+    res.json(votos);
+});
+
+app.post('/api/votos', function (req, res) {
+    const nuevoVoto = {
+        identificacion: req.body.identificacion,
+        candidato: req.body.candidato,
+        fecha: new Date().toISOString()
+    };
+
+    if (!nuevoVoto.identificacion || !nuevoVoto.candidato) {
+        return res.status(400).json({
+            mensaje: "faltan datos obligatorios"
+        });
+    }
+
+    const votos = leerVotos();
+    votos.push(nuevoVoto);
+    guardarVotos(votos);
+
+    res.status(201).json({
+        mensaje: "voto registrado correctamente",
+        voto: nuevoVoto
+    });
+});
+
 app.post('/api/candidatos', function (req, res) {
     const nuevoCandidato = {
         id: Date.now(),

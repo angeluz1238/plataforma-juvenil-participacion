@@ -12,5 +12,19 @@
     "rol": "observador",
     "propuesta": "confirmar informacion confiable",
     "estado": "perfil de práctica académica"
+  },
+  {
+    "id": 1780028717639,
+    "nombre": "test",
+    "rol": "test",
+    "propuesta": "test",
+    "estado": "perfil de práctica académica"
+  },
+  {
+    "id": 1780028999302,
+    "nombre": "test2",
+    "rol": "rol2",
+    "propuesta": "prop2",
+    "estado": "perfil de práctica académica"
   }
 ]

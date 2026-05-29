@@ -11,7 +11,7 @@ const contenedorCandidatosGuardados = document.getElementById("contenedorCandida
 
 async function cargarCandidatosGuardados() {
   try {
-    const respuesta = await fetch("/candidatos");
+    const respuesta = await fetch("/api/candidatos");
     if (!respuesta.ok) throw new Error("Error al cargar candidatos");
     
     const candidatos = await respuesta.json();
@@ -76,25 +76,45 @@ btnGuardarCandidato.addEventListener("click", async function () {
     propuesta: propuesta
   };
 
-  const respuesta = await fetch("/api/candidatos", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(nuevoPerfil)
-  });
+  try {
+    const respuesta = await fetch("/api/candidatos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(nuevoPerfil)
+    });
 
-  const resultado = await respuesta.json();
-  mensajeGuardado.textContent = resultado.mensaje;
+    if (!respuesta.ok) {
+      const resultado = await respuesta.json().catch(() => null);
+      mensajeGuardado.textContent = resultado?.mensaje || "Error al guardar el perfil.";
+      return;
+    }
 
-  document.getElementById("nombreCandidato").value = "";
-  document.getElementById("rolCandidato").value = "";
-  document.getElementById("propuestaCandidato").value = "";
+    const resultado = await respuesta.json();
+    mensajeGuardado.textContent = resultado.mensaje;
 
-  cargarCandidatosGuardados();
+    document.getElementById("nombreCandidato").value = "";
+    document.getElementById("rolCandidato").value = "";
+    document.getElementById("propuestaCandidato").value = "";
+
+    cargarCandidatosGuardados();
+  } catch (error) {
+    console.error("Error al guardar perfil:", error);
+    mensajeGuardado.textContent = "No se pudo conectar al servidor. Asegúrate de ejecutar el servidor.";
+  }
 });
 
-cargarCandidatosGuardados();
+function iniciarApp() {
+  if (window.location.protocol === "file:") {
+    mensajeGuardado.textContent = "Abre esta página desde el servidor local: http://localhost:30000/index.html";
+    return;
+  }
+
+  cargarCandidatosGuardados();
+}
+
+iniciarApp();
 
 
 
